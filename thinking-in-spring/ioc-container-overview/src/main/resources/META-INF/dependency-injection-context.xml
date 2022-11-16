@@ -6,13 +6,14 @@
         http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
     <import resource="dependency-lookup-context.xml"></import>
-    <bean id="userRepository" class="org.keer.think.in.spring.ioc.overview.dependency.repository.UserRepository">
-        <property name="users">
+    <bean id="userRepository" class="org.keer.think.in.spring.ioc.overview.dependency.repository.UserRepository" autowire="byType">
+        <!--手动配置-->
+        <!--<property name="users">
             <util:list>
                 <ref bean="user"/>
                 <ref bean="superUser"/>
             </util:list>
-        </property>
+        </property>-->
     </bean>
 
 </beans>
