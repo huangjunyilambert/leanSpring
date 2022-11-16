@@ -12,9 +12,19 @@
       <property name="id" value="18"></property>
       <property name="name" value="卡尔"></property>
   </bean>
+    <bean id="superUser" class="org.keer.think.in.spring.ioc.overview.dependency.domain.SuperUser" parent="user" primary="true">
+        <property name="address" value="杭州">
+
+        </property>
+    </bean>
+
     <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
         <property name="targetBeanName" value="user"></property>
     </bean>
+
+
+
+
 
 
 </beans>
