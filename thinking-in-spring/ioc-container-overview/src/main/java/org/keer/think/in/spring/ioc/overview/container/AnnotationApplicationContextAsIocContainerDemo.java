@@ -20,6 +20,7 @@ public class AnnotationApplicationContextAsIocContainerDemo {
         applicationContext.register(AnnotationApplicationContextAsIocContainerDemo.class);
         applicationContext.refresh();
         lookupByCollectionByType(applicationContext);
+        applicationContext.close();
     }
 
     @Bean
